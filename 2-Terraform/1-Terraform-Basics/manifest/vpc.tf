@@ -12,7 +12,7 @@ provider "google" {
   project     = "terraform-470417"
   region      = "us-central1"
   zone        = "us-central1-a"
-  credentials = "/home/ubuntu/terraform-sa-key"
+  credentials = "/home/ubuntu/terraform-sa-key.json"
 }
 
 resource "google_compute_subnetwork" "polom-subnet" {

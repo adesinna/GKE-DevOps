@@ -1,3 +1,12 @@
+1. Create SA
+
+2. Create Roles for the sa
+
+2. Create a Key
+
+2. download key and save on your server
+
+
 IVFPAD
 
 terraform init
@@ -21,10 +30,29 @@ We are going to create a simple vpc and subnets in the cloud using the doc
 
 Read https://cloud.google.com/docs/terraform/authentication
 
-1. Create SA
 
-2. Create Roles for the sa
+1. .terraform.lock.hcl
 
-2. Create a Key
+    This is the dependency lock file.
+    It records the exact versions of Terraform providers (e.g., Google provider) that were installed when you ran terraform init.
+    Purpose: makes sure your team or future runs use the same provider versions for consistent results.
+    ✅ Should be committed to version control (e.g., Git).
 
-2. download key and save on your server
+
+
+2. terraform.tfstate
+
+    This is the state file — the heart of Terraform.
+    It tracks what Terraform has already created in your cloud (Google Cloud in your case).
+    Without this, Terraform wouldn’t know if a resource already exists.
+    Example inside: it stores the VPC name, IDs, project number, etc.
+
+
+3. terraform.tfstate.backup
+
+    Automatic backup of your previous state file before changes.
+    Created each time you run terraform apply.
+    Useful if something breaks and you need to roll back.
+
+
+

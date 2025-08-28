@@ -1,0 +1,4 @@
+We are going to create a VM, in a vpc and subnets
+
+open port 22 and 80
+

@@ -22,6 +22,7 @@ sudo apt-get install -y google-cloud-cli
 echo "Initializing Google Cloud CLI..."
 gcloud init
 
+gcloud services enable compute.googleapis.com
 # -------------------------
 # Install Terraform
 # -------------------------
