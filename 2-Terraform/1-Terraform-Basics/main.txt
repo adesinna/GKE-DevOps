@@ -18,3 +18,13 @@ terraform apply -auto-approve
 terraform destroy -auto-approve
 
 We are going to create a simple vpc and subnets in the cloud using the doc
+
+Read https://cloud.google.com/docs/terraform/authentication
+
+1. Create SA
+
+2. Create Roles for the sa
+
+2. Create a Key
+
+2. download key and save on your server
