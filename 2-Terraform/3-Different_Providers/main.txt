@@ -1,0 +1,2 @@
+Suppose we are to create similar resources in different project, we can use providers for different projects.
+Use alias in the provider, and specific the alias provider in the resource arguments.
