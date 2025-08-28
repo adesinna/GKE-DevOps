@@ -3,3 +3,18 @@ IVFPAD
 terraform init
     This will initialize the working directory
 
+terraform validate
+    This will validate and check the commands whether they are correct
+
+terraform format
+    This will format the files
+
+terraform plan
+    This will plan and show you what changes it would make on the cloud
+
+terraform apply -auto-approve
+    This will apply the configurations would made
+
+terraform destroy -auto-approve
+
+We are going to create a simple vpc and subnets in the cloud using the doc
