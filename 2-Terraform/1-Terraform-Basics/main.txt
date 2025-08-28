@@ -1,0 +1,5 @@
+IVFPAD
+
+terraform init
+    This will initialize the working directory
+
