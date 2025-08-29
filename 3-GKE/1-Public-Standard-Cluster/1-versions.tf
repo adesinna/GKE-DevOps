@@ -8,6 +8,7 @@ terraform {
   backend "gcs" {
     bucket = "polomapp"
     prefix = "dev-polom" # create this folder
+    credentials = "/home/ubuntu/terraform-sa-key.json"
   }
 }
 provider "google" {

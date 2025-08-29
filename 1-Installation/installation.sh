@@ -18,11 +18,15 @@ echo "Updating package lists for Google Cloud SDK..."
 sudo apt-get update
 echo "Installing Google Cloud CLI..."
 sudo apt-get install -y google-cloud-cli
+sudo apt-get install google-cloud-cli-gke-gcloud-auth-plugin
 
 echo "Initializing Google Cloud CLI..."
 gcloud init
 
 gcloud services enable compute.googleapis.com
+gcloud services enable container.googleapis.com
+
+
 # -------------------------
 # Install Terraform
 # -------------------------
