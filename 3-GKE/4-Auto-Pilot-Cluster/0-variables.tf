@@ -53,12 +53,3 @@ variable "master_ip_range" {
   default = "10.13.0.0/28"
 }
 
-variable "source_range" {
-  description = "range of to which you want to connect to the bastion host"
-  type = string
-}
-
-variable "bastion_ip" {
-  description = "bastion host ip"
-  type = string
-}
