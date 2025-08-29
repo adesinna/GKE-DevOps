@@ -2,14 +2,9 @@
 resource "google_container_cluster" "gke_cluster" {
   name     = "${local.name}-gke-cluster"
   location = var.region
+  node_locations = var.zones
 
   enable_autopilot = true # autopilot
-
-  node_config {
-    disk_size_gb = 20    # Minimum size instead of default 100GB
-    disk_type    = "pd-standard"  # Use standard disk instead of SSD
-    machine_type = var.machine_type
-  }
 
   # Network
   network = google_compute_network.myvpc.self_link
