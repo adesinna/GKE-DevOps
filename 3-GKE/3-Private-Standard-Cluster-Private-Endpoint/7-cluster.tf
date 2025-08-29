@@ -25,7 +25,7 @@ resource "google_container_cluster" "gke_cluster" {
 
   # Private Cluster Configurations
   private_cluster_config {
-    enable_private_endpoint = false # it means you do not need a bastion host to communicate to your cluster
+    enable_private_endpoint = true # it means you do need a bastion host to communicate to your cluster
     enable_private_nodes    = true  # it means it will have only private ips only
     master_ipv4_cidr_block  = var.master_ip_range
   }
