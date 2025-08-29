@@ -53,8 +53,3 @@ variable "master_ip_range" {
   default = "10.13.0.0/28"
 }
 
-variable "zones" {
-  description = "Availability zones"
-  type = list(string)
-}
-
