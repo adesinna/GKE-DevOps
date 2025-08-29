@@ -8,6 +8,6 @@ resource "google_compute_firewall" "fw_ssh" {
   direction     = "INGRESS"
   network       = google_compute_network.myvpc.id
   priority      = 1000
-  source_ranges = [var.IAP_range] # Identity Aware Proxy range, i.e your ip
+  source_ranges = ["35.235.240.0/20"] # Identity Aware Proxy IP you must use so it can tunnel
   target_tags   = ["ssh-tag"]
 }

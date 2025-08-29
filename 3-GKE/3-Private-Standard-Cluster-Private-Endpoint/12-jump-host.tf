@@ -5,7 +5,7 @@ resource "google_compute_address" "bastion_internal_ip" {  # like elastic ip
   address_type = "INTERNAL"
   region       = var.region
   subnetwork   = google_compute_subnetwork.mysubnet.id
-  address      = "10.128.15.15"  # from the subnet range
+  address      = var.bastion_ip  # from the subnet range
 }
 
 # Resource Block: Create a single Compute Engine instance

@@ -39,8 +39,8 @@ resource "google_container_cluster" "gke_cluster" {
   # Allow access to Kubernetes master API Endpoint
   master_authorized_networks_config {
     cidr_blocks {
-      cidr_block = "0.0.0.0/0"
-      display_name = "entire-internet"
+      cidr_block = var.bastion_ip  # only this ip can access the kube-api sever
+      display_name = "Access only from Bastion VM whose IP is 10.128.15.15"
     }
   }
 }
