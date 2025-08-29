@@ -7,6 +7,8 @@ Standard:
         Public cluster: This is in a public subnet
         Private cluster: This is secured, in a private subnet
 
+        They use cluster autoscaler which you define min and max node
+
 Autopilot:
     You do not need to manage the nodes  just like managed nodes in AWS
 
@@ -15,5 +17,6 @@ Autopilot:
      Public cluster: This is in a public subnet
      Private cluster: This is secured, in a private subnet
 
+     They use Node Auto provision
 
 # we will use google cloud storage bucket for storing our state file and for locking too

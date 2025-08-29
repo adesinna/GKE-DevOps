@@ -13,7 +13,7 @@ resource "google_container_cluster" "gke_cluster" {
    node_config {
     disk_size_gb = 20    # Minimum size instead of default 100GB
     disk_type    = "pd-standard"  # Use standard disk instead of SSD
-    machine_type = "e2-micro"  # Use smallest machine type
+    machine_type = var.machine_type
   }
 
   # Network

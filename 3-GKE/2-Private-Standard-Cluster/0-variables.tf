@@ -27,3 +27,28 @@ variable "environment" {
   type = string
   default = "dev"
 }
+
+# CIDR IP Ranges
+variable "subnet_ip_range" {
+  description = "Subnet IP range"
+  type = string
+  default = "10.129.0.0/20"
+}
+
+variable "pods_ip_range" {
+  description = "Kubernetes Pods IP range"
+  type = string
+  default = "10.11.0.0/21"
+}
+
+variable "services_ip_range" {
+  description = "Kubernetes Services IP range"
+  type = string
+  default = "10.12.0.0/21"
+}
+
+variable "master_ip_range" {
+  description = "Kubernetes Master IP range"
+  type = string
+  default = "10.13.0.0/28"
+}
