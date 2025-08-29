@@ -1,0 +1,19 @@
+GKE Cluster Mode
+
+Standard:
+    You add your worker nodes to the cluster just like self-managed nodes in AWS
+        Zonal cluster: all nodes are in the zone
+        Regional cluster: all nodes are spread in multiple zone
+        Public cluster: This is in a public subnet
+        Private cluster: This is secured, in a private subnet
+
+Autopilot:
+    You do not need to manage the nodes  just like managed nodes in AWS
+
+     Zonal cluster: all nodes are in the zone
+     Regional cluster: all nodes are spread in multiple zone
+     Public cluster: This is in a public subnet
+     Private cluster: This is secured, in a private subnet
+
+
+# we will use google cloud storage bucket for storing our state file and for locking too
