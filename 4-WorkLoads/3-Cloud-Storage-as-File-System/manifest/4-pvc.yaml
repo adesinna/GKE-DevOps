@@ -10,4 +10,4 @@ spec:
     requests:
       storage: 5Gi
   volumeName: gcs-fuse-csi-pv
-#  storageClassName: dummy-storage-class
+  storageClassName: dummy-storage-class
