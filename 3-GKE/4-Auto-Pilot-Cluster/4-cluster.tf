@@ -2,7 +2,7 @@
 resource "google_container_cluster" "gke_cluster" {
   name     = "${local.name}-gke-cluster"
   location = var.region
-  node_locations = var.zones
+
 
   enable_autopilot = true # autopilot
 

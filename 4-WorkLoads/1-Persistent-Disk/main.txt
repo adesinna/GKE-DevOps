@@ -1,0 +1,2 @@
+This is use to create volumes on GCP, SC would create a PV which is persitent disk on GCP. Then you can create
+a pvc that would now bind to the volume
