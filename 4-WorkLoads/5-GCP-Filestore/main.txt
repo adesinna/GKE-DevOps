@@ -1,0 +1,4 @@
+This is great when many pods wants to write and read at the same time.
+Enable
+
+Go to Kubernetes Engine -> standard-cluster-private -> Details -> Features -> Filestore CSI driver
