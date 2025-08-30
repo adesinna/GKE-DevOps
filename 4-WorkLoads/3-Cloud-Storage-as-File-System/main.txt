@@ -1,0 +1,24 @@
+Fuse is an interface primarily used to export a filesystem to the linux kernel. Cloud Storage FUSE CSI Driver allows
+you to mount cloud storage buckets as file system.
+Application would do I/O without using google cloud api to consume the objects in the bucket.
+
+1.We need to create a bucket on GCP storage, with some static files.
+
+2. We need to attach a special role to our project, which will reference a namespace and service account
+
+
+gcloud projects add-iam-policy-binding terraform-470417\
+    --member='user:adesinagcp@gmail.com' \
+    --role='roles/resourcemanager.projectIamAdmin'
+
+ --member "principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/PROJECT_ID.svc.id.goog/subject/ns/NAMESPACE/sa/KSA_NAME" \
+    --role "ROLE_NAME"
+
+gcloud projects add-iam-policy-binding terraform-470417 \
+    --member "principal://iam.googleapis.com/projects/679388414534/locations/global/workloadIdentityPools/terraform-470417.svc.id.goog/subject/ns/mydemo1ns/sa/mydemo1sa" \
+    --role "roles/storage.objectUser"
+
+
+3. Create ns, sa in K8s
+
+4. Any pod withn the sa will be able to get object

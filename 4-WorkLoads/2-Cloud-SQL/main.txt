@@ -1,0 +1,15 @@
+You can use cloud sql, now we would create the database in its own vpc and do a vpc peer with our own infrastructure.
+
+1. First you need to reserve ip in your vpc
+
+2. You need to create a private service connection
+
+3. Create your db
+
+4. exec into the test pod
+
+mysql -h <CLOUD_SQL_PRIVATE_IP> -u umsadmin -p webappdb
+
+# terraform output to see the db ip
+
+enter password
