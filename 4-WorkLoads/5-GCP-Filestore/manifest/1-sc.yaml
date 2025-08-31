@@ -7,4 +7,4 @@ volumeBindingMode: WaitForFirstConsumer
 allowVolumeExpansion: true
 parameters:
   tier: standard # Allowed values standard, premium, or enterprise
-  network: hr-dev-vpc # The network parameter can be used  when provisioning Filestore instances on non-default VPCs.
+  network: polom-dev-vpc # The network parameter can be used  when provisioning Filestore instances on non-default VPCs.
