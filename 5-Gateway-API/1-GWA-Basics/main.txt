@@ -1,4 +1,9 @@
 The applications can be served in regional, there must be Regional Proxy-Only Subnet (Required for Regional Application Load Balancer)
 create that, then we good to go.
 
-We going to use the regional gw class, that matches the regional load balancer
+We going to use the regional gw class, that matches the regional load balancer.
+
+gcloud compute addresses create static-ip \
+    --region="us-central1" \
+    --project=terraform-470417 \
+    --network-tier="STANDARD"
