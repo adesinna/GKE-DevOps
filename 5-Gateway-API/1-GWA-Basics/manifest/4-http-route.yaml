@@ -10,4 +10,4 @@ spec:
   - backendRefs:
     - name: myapp1-service
       port: 80
-      weight: 100
+      weight: 100  # this takes the all the traffic to the myapp1-service
