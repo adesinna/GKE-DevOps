@@ -1,3 +1,14 @@
+gcloud compute addresses create static-ip \
+    --region="us-central1" \
+    --project=terraform-470417 \
+    --network-tier="STANDARD"
+
+
+gcloud compute addresses delete static-ip \
+    --region="us-central1" \
+    --project=terraform-470417
+
+
 use the doc to create a cert and certificate signing request and approve
 it
 
