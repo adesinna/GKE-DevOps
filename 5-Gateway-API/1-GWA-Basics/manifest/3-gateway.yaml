@@ -10,4 +10,4 @@ spec:
     port: 80
   addresses:
     - type: NamedAddress
-      value: static-ip
+      value: static-ip # name of the static ip created
